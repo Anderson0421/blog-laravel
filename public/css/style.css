@@ -1,0 +1,21 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 50%;
+    margin: auto;
+}
+.container article h1{
+    border-bottom: 2px solid gray;
+    padding-bottom: 3px;
+}
+
+.container article h1,
+.container article p{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.container article p{
+    font-size: 13px;
+}
