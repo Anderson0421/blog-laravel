@@ -19,3 +19,21 @@
 .container article p{
     font-size: 13px;
 }
+.item_cursos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.item_cursos li{
+    font-size: 20px;
+}
+.progress{
+    margin-left: 10px;
+    font-size: 15px;
+}
+.progress_yes{
+    color: rgb(9, 205, 9);
+}
+.progress_not{
+    color: red;
+}

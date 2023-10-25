@@ -21,3 +21,15 @@ Route::get('/', function () {
     return view('welcome')->with('posts',$posts);
 });
 
+
+Route::get('Cursos/',function(){
+    $cursos = [
+        ['title'=>'Laravel 9','progress'=>30],
+        ['title'=>'Django','progress'=>80],
+        ['title'=>'TailwindCSS','progress'=>50],
+        ['title'=>'Vue.js','progress'=>00],
+        ['title'=>'Laravel Mix','progress'=>00],
+        ['title'=>'MongoDB','progress'=>00],
+    ];
+    return view('cursos')->with('cursos',$cursos);
+});
