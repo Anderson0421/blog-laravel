@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mis cursos</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js"></script>
 </head>
 <body>
     <h1>Mis cursos</h1>
@@ -20,5 +21,6 @@
             </li>
         @endforeach
     </ul>
+
 </body>
 </html>
