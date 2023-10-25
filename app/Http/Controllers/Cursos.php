@@ -2,19 +2,15 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Cursos extends Controller
 {
     public function show_cursos(){
-        $cursos = [
-            ['title'=>'Laravel 9','progress'=>30],
-            ['title'=>'Django','progress'=>80],
-            ['title'=>'TailwindCSS','progress'=>50],
-            ['title'=>'Vue.js','progress'=>00],
-            ['title'=>'Laravel Mix','progress'=>00],
-            ['title'=>'MongoDB','progress'=>00],
-        ];
-        return view('cursos')->with('cursos',$cursos);
+        $cursos = DB::table('cursos')->get();
+        $cantidad = DB::table('cursos')->count();
+        return view('cursos')->with('cursos',$cursos)->with('cantidad',$cantidad);
     }
 }

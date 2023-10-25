@@ -14,10 +14,6 @@ Route::controller(Cursos::class)->group(function(){
 
 
 
-
-
-
-
 // ----------------------  A --------------------------------  //
 
 Route::controller(PostsController::class)->group(function(){
