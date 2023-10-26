@@ -5,7 +5,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',[HomeController::class, "show"]);
 
 // Lo que recibe este agrupador de controllers es la clase osea el controlador y el metodo group con una fucnion dentro todas las urls
 Route::controller(Cursos::class)->group(function(){
@@ -18,7 +17,11 @@ Route::controller(Cursos::class)->group(function(){
 
 Route::controller(PostsController::class)->group(function(){
     // Para mostrar todos los posts
-    Route::post('Posts', 'store');
+    Route::get('/',[HomeController::class, "show"]);
+    Route::get('/{id}',[HomeController::class, "post_id"]);
+
+    #Route::get('Posts/{id}/', 'post_id');
+
     
     // Para mostrar un Post segun su ID
     Route::get('/Posts/{id}', 'show');
