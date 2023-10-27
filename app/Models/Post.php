@@ -12,4 +12,10 @@ class Post extends Model
     //protected $table = 'my_posts';
 
     use HasFactory;
+    // Que campos estan indicados para ser asignados masivamente 
+    protected  $fillable = [
+        'title',
+        'excerpt',
+        'content',
+    ];
 }

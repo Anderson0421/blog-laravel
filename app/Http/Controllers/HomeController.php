@@ -22,12 +22,31 @@ class HomeController extends Controller
     }
 
     public function store(Request $request){
-        $post = new Post;
-        $post->title = $request->title;
-        $post->content = $request->content;
+
+        // 1era manera
+        // $post = new Post;
+        // $post->title = $request->title;
+        // $post->excerpt = $request->content;
+        // $post->content = $request->content;
+        // $post->save();
+
+        // 2da manera
+        // Este es un metodo estatico este metodo estatico espera recibir un array con las llaves
+        // de la columna y los valore
+
+        Post::create([
+            'title' => $request->title,
+            'excerpt' => $request->content,
+            'content' => $request->content,
+        ]);
+
+        return redirect('/');
     }
+
 
     public function create(){
         return view('Posts.create');
     }
+
+
 }

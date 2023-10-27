@@ -17,8 +17,10 @@ Route::controller(Cursos::class)->group(function(){
 
 Route::controller(HomeController::class)->group(function(){
 
-    Route::post('/Blog', 'show'); // Ruta para mostrar el formulario (Método GET)
+    Route::get('/', 'show'); // Ruta para mostrar el formulario (Método GET)
     Route::post('/Blog', 'store'); // Ruta para procesar el formulario y guardar datos (Método POST)
+
+    Route::get('/Blog/{id}', 'post_id'); // Ruta para procesar el formulario y guardar datos (Método POST)
 
     Route::get('/Create', 'create');
 
