@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     public function show(){
-        $posts = DB::table('posts')->get();
-        return view('welcome')->with('posts',$posts);
+        $posts = Post::get();  #Para traer informacion desde la BD 
+        #tambien podemos hacer c omo una consulta solo para algunos datos
+        #$posts = DB::table('posts')->select('id','title','content')->get();
+        return view('welcome')->with('posts',$posts); 
+
     }
 
     public function post_id($id){

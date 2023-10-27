@@ -18,7 +18,7 @@ Route::controller(Cursos::class)->group(function(){
 Route::controller(PostsController::class)->group(function(){
     // Para mostrar todos los posts
     Route::get('/',[HomeController::class, "show"]);
-    Route::get('/{id}',[HomeController::class, "post_id"]);
+    Route::get('/Blog/{id}',[HomeController::class, "post_id"]);
 
     #Route::get('Posts/{id}/', 'post_id');
 

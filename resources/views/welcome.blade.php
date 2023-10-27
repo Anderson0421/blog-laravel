@@ -13,8 +13,8 @@
         <div class="py-5 text-blue-100 font-semibold flex justify-between">
             <div class="flex items-center">
                 <div class="flex gap-x-5 items-center">
-                    <a href="#" class="flex items-center text-2xl font-bold">
-                        <img src="img/tailwind-css-2.svg" class="w-16 mr-2">
+                    <a href="/" class="flex items-center text-2xl font-bold">
+                        <img src="../img/tailwind-css-2.svg" class="w-16 mr-2">
                         AnderDevBlog
                     </a>
                 </div>
@@ -40,7 +40,7 @@
                     <p class="text-gray-400">August 8 , 2023</p>
                 </div>
                 <div class="w-2/3">
-                    <h1 class="text-xl text-white font-bold"> {{$post->title}} </h1>
+                    <h1 class="text-xl text-white font-bold"> {{$post->title}} </h1> 
                     <div class="flex gap-x-6">
                         <a href="#" class="text-green-600">NEXT JS</a>
                         <a href="#" class="text-green-600">TailwindCSS</a>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="flex flex-col gap-4 pt-6">
                         <p class="text-gray-400">{{$post->content}}</p>
-                        <a href="#" class="text-green-600">Read more -></a>
+                        <a href="Blog/{{$post->id}}" class="text-green-600">Read more -></a>
                     </div>
                 </div>
             </div>
