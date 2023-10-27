@@ -37,7 +37,7 @@
         @foreach ($posts as $post)
         <div class="flex pt-14">
                 <div class="w-1/2">
-                    <p class="text-gray-400">August 8 , 2023</p>
+                    <p class="text-gray-400"> {{$post->created_at}} </p>
                 </div>
                 <div class="w-2/3">
                     <h1 class="text-xl text-white font-bold"> {{$post->title}} </h1> 
