@@ -20,4 +20,14 @@ class HomeController extends Controller
         $posts = DB::table('posts')->where('id',$id)->get(); # De esta forma es la ORM Eloquent
         return view('welcome')->with('posts',$posts);
     }
+
+    public function store(Request $request){
+        $post = new Post;
+        $post->title = $request->title;
+        $post->content = $request->content;
+    }
+
+    public function create(){
+        return view('Posts.create');
+    }
 }

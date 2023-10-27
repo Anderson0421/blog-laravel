@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\Cursos;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,26 +14,13 @@ Route::controller(Cursos::class)->group(function(){
 
 // ----------------------  A --------------------------------  //
 
-Route::controller(PostsController::class)->group(function(){
-    // Para mostrar todos los posts
-    Route::get('/',[HomeController::class, "show"]);
-    Route::get('/Blog/{id}',[HomeController::class, "post_id"]);
 
-    #Route::get('Posts/{id}/', 'post_id');
+Route::controller(HomeController::class)->group(function(){
 
-    
-    // Para mostrar un Post segun su ID
-    Route::get('/Posts/{id}', 'show');
-    
-    // Para crear un Post
-    Route::get('/Posts/create', 'create');
-    
-    // Para editar un post
-    Route::get('Posts/{id}/edit','edit');
-    
-    // Para guardar los cambios del edit del post edit
-    Route::patch('Posts/{id}', 'update');
-    
-    //Para Eliminar un post
-    Route::delete('Posts/{id}', 'delete');
+    Route::post('/Blog', 'show'); // Ruta para mostrar el formulario (Método GET)
+    Route::post('/Blog', 'store'); // Ruta para procesar el formulario y guardar datos (Método POST)
+
+    Route::get('/Create', 'create');
+
 });    
+
