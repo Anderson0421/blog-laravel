@@ -12,4 +12,14 @@ class TasksController extends Controller
 
         return view('Tasks.tasks')->with('tareas',$tareas);
     }
+
+    public function save(Request $request){
+        
+        Task::create([
+            'title' => $request->title,
+            'categoria' => $request->categoria,
+        ]);
+
+        return redirect('/Tasks');
+    }
 }

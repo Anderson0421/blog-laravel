@@ -31,6 +31,9 @@ Route::controller(HomeController::class)->group(function(){
 Route::controller(TasksController::class)->group(function(){
     Route::get('/Tasks', 'tareas');
 
+    Route::post('/Tasks/New', 'save');
+    
+
 });
 
 
