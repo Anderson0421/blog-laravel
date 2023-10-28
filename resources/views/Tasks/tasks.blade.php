@@ -29,8 +29,9 @@
         </div>
 
         <div>
-            <button type="text" class="px-6 py-4 rounded-lg bg-blue-950 text-gray-100">New task<button>
+            <button type="text" class="px-6 py-4 rounded-lg bg-blue-900 text-gray-100">New task<button>
         </div>
+        
     </div>
 </body>
 </html>
