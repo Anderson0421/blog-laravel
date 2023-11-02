@@ -40,7 +40,7 @@
                     <p class="text-gray-400"> {{$post->created_at}} </p>
                 </div>
                 <div class="w-2/3">
-                    <h1 class="text-xl text-white font-bold"> {{$post->title}} </h1> 
+                    <h1 class="text-xl text-white font-bold"><a href="/Blog/{{$post->id}}">{{$post->title}}</a></h1> 
                     <div class="flex gap-x-6">
                         <a href="#" class="text-green-600">NEXT JS</a>
                         <a href="#" class="text-green-600">TailwindCSS</a>

@@ -9,16 +9,17 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     public function show(){
-        $posts = Post::get();  #Para traer informacion desde la BD 
+        #En este caso lo estamos ordenando de segun su fecha de forma descendente
+        $posts = Post::orderBy('updated_at','desc')->get();  #Para traer informacion desde la BD 
         #tambien podemos hacer c omo una consulta solo para algunos datos
         #$posts = DB::table('posts')->select('id','title','content')->get();
         return view('welcome')->with('posts',$posts); 
 
     }
 
-    public function post_id($id){
-        $posts = DB::table('posts')->where('id',$id)->get(); # De esta forma es la ORM Eloquent
-        return view('welcome')->with('posts',$posts);
+    public function post_id(Post $id){
+        //$posts = Post::findOrFail($id);
+        return view('Posts/show')->with('posts',$id);
     }
 
     public function store(Request $request){
