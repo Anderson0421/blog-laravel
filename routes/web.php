@@ -23,6 +23,10 @@ Route::controller(HomeController::class)->group(function(){
 
     Route::get('/Blog/{id}', 'post_id'); // Ruta para procesar el formulario y guardar datos (Método POST)
 
+    Route::get('Blog/{id}/edit', 'edit'); // Ruta para editar el formulario
+
+    Route::patch('Blog/{post}', 'update'); // Ruta para procesar el formulario y guardar los datos Metodo patch
+
     Route::get('/Create', 'create');
 });    
 

@@ -49,5 +49,19 @@ class HomeController extends Controller
         return view('Posts.create');
     }
 
+    public function edit(Post $id){
+        return view('Posts.edit')->with('post',$id);
+    }
+
+    public function update(Request $request,Post $post){
+        $post->update([
+            'title'=>$request->input('title'),
+            'content'=>$request->input('content'),
+            'excerpt'=>$request->input('content'),
+        ]);
+
+        return redirect('/');
+    }
+
 
 }

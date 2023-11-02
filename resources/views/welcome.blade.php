@@ -48,7 +48,7 @@
                     </div>
                     <div class="flex flex-col gap-4 pt-6">
                         <p class="text-gray-400">{{$post->content}}</p>
-                        <a href="Blog/{{$post->id}}" class="text-green-600">Read more -></a>
+                        <a href="Blog/{{$post->id}}/edit" class="text-green-600">Editar -> </a>
                     </div>
                 </div>
             </div>
