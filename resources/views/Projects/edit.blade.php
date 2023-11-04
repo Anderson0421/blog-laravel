@@ -1,4 +1,4 @@
-<form action="/Proyects/process" method="POST">
+<form action="Proyects/{project}" method="POST">
     @csrf
     @method('PATCH')
     <input type="text" name="title" placeholder="Titulo" value="{{$project->title}}">
