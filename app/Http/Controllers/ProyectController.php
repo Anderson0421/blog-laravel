@@ -22,12 +22,17 @@ class ProyectController extends Controller
     }
 
     public function create(){
+        return view('Projects/new');
+    }
 
-        Proyecto::created([
-
+    public function process(Request $request){
+        
+        Proyecto::create([
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'tecnologias'=>$request->tecnologias,
         ]);
         
-        return view('Projects/new');
     }
 
 }
