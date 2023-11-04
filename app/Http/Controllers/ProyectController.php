@@ -43,10 +43,13 @@ class ProyectController extends Controller
 
     public function update(Request $request, Proyecto $proyecto){
         $proyecto->update([
-            'title'=>$request->title,
-            'description'=>$request->description,
-            'tecnologias'=>$request->tecnologias,
+            'title'=>$request->input('title'),
+            'description'=>$request->input('description'),
+            'tecnologias'=>$request->input('tecnologias'),
         ]);
+
+
+        
 
         return redirect('/Proyects');
 

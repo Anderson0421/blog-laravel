@@ -54,7 +54,7 @@ Route::controller(ProyectController::class)->group(function(){
     Route::get('Proyects/{id}','by_id');
 
     Route::get('Proyects/{id}/edit', 'edit');
-    Route::patch('Proyects/{project}', 'update');
+    Route::patch('/Proyects/{proyecto}', 'update');
 
 
 
