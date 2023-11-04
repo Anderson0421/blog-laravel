@@ -15,4 +15,10 @@ class ProyectController extends Controller
 
     }
 
+    public function by_id($id){
+        $proyectos = Proyecto::find($id);
+
+        return view('Projects/proyectos')->with('projects',$proyectos);
+    }
+
 }
