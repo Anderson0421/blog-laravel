@@ -56,6 +56,8 @@ Route::controller(ProyectController::class)->group(function(){
     Route::get('Proyects/{id}/edit', 'edit');
     Route::patch('/Proyects/{proyecto}', 'update')->name('Projecto');
 
+    Route::delete('/Projects/{id}/delete','delete')->name('delete');
+
 
 
 });

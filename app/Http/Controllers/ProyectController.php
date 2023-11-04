@@ -55,4 +55,13 @@ class ProyectController extends Controller
 
     }  
 
+    public function delete(Request $request, Proyecto $id){
+    
+
+        $id->delete();
+
+        return redirect('/Proyects');
+    
+    }
+
 }
