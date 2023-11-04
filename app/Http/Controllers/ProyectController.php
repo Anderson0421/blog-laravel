@@ -16,9 +16,9 @@ class ProyectController extends Controller
     }
 
     public function by_id($id){
-        $proyectos = Proyecto::find($id);
+        $projects = Proyecto::findorFail($id)->get();
 
-        return view('Projects/proyectos')->with('projects',$proyectos);
+        return view('Projects/proyectos')->with('projects',$projects);
     }
 
 }
