@@ -23,6 +23,11 @@ class ProyectController extends Controller
 
     public function create(){
 
+        Proyecto::created([
+
+        ]);
+        
+        return view('Projects/new');
     }
 
 }

@@ -51,6 +51,7 @@ Route::controller(ProyectController::class)->group(function(){
     Route::get('Proyects/{id}','by_id');
 
     Route::get('Proyects/Create', 'create');
+    
     Route::post('Proyects/','process');
 
 });
