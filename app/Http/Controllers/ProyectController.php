@@ -21,4 +21,8 @@ class ProyectController extends Controller
         return view('Projects/proyectos')->with('projects',$projects);
     }
 
+    public function create(){
+
+    }
+
 }

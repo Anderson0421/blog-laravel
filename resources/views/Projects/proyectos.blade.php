@@ -40,7 +40,11 @@
                         @endforeach
                     </tbody>
                 </table>
+                <br>
                 
+                <a href="Proyects/Create" class="flex px-5 py-3  bg-blue-600 w-max rounded-lg">
+                    Crear nuevo
+                </a>
             </div>
         </div>
 
