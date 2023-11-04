@@ -41,8 +41,8 @@ class ProyectController extends Controller
         return view('Projects.edit')->with('project',$id);
     }
 
-    public function update(Request $request, $id){
-        Proyecto::updated([
+    public function update(Request $request, Proyecto $proyecto){
+        $proyecto->update([
             'title'=>$request->title,
             'description'=>$request->description,
             'tecnologias'=>$request->tecnologias,
