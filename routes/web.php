@@ -48,10 +48,11 @@ Route::controller(ProyectController::class)->group(function(){
 
     Route::get('/Proyects', 'proyectos');
 
+    Route::get('/Proyects/Create/', 'create');
+    
     Route::get('Proyects/{id}','by_id');
 
-    Route::get('Proyects/Create', 'create');
-    
+
     Route::post('Proyects/','process');
 
 });
