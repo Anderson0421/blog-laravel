@@ -1,6 +1,7 @@
-<form action="/Proyects/{proyecto}" method="POST">
+<form action="{{ route('Projecto', ['proyecto' => $project]) }}" method="POST">
     @csrf
     @method('PATCH')
+
     <input type="text" name="title" placeholder="Titulo" value="{{$project->title}}">
     <input type="text" name="description" placeholder="Descripcion" value="{{$project->description}}">
     <select name="tecnologias">
