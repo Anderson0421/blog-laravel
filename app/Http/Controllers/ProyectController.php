@@ -33,6 +33,7 @@ class ProyectController extends Controller
             'tecnologias'=>$request->tecnologias,
         ]);
         
+        return redirect('/Proyects');
     }
 
 }
