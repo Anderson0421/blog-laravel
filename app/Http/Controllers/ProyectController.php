@@ -48,20 +48,11 @@ class ProyectController extends Controller
             'tecnologias'=>$request->input('tecnologias'),
         ]);
 
-
-        
-
         return redirect('/Proyects');
-
     }  
-
     public function delete(Request $request, Proyecto $id){
-    
-
         $id->delete();
-
         return redirect('/Proyects');
-    
     }
 
 }
