@@ -36,4 +36,20 @@ class ProyectController extends Controller
         return redirect('/Proyects');
     }
 
+    public function edit(Proyecto $id){
+
+        return view('Projects.edit')->with('project',$id);
+    }
+
+    public function update(Request $request, $id){
+        Proyecto::updated([
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'tecnologias'=>$request->tecnologias,
+        ]);
+
+        return redirect('/Proyects');
+
+    }  
+
 }
