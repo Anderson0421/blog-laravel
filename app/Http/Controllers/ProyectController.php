@@ -22,12 +22,13 @@ class ProyectController extends Controller
     }
 
     public function create(){
+        $projects = Proyecto::get();
 
         Proyecto::created([
 
         ]);
         
-        return view('Projects/new');
+        return view('Projects/new')->with('projects',$projects);
     }
 
 }
