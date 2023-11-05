@@ -45,19 +45,11 @@ Route::controller(TasksController::class)->group(function(){
 
 
 Route::controller(ProyectController::class)->group(function(){
-
     Route::get('/Proyects', 'proyectos');
-
     Route::get('/Proyects/Create/', 'create');
     Route::post('/Proyects/process','process');
-
     Route::get('Proyects/{id}','by_id');
-
     Route::get('Proyects/{id}/edit', 'edit');
     Route::patch('/Proyects/{proyecto}', 'update')->name('Projecto');
-
     Route::delete('/Projects/{id}/delete','delete')->name('delete');
-
-
-
 });
